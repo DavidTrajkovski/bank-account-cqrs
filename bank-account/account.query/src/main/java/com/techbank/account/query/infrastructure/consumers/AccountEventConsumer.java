@@ -21,28 +21,28 @@ public class AccountEventConsumer implements EventConsumer {
     @Override
     @KafkaListener(topics = "AccountOpenedEvent", groupId = "${spring.kafka.consumer.group-id}") // this comes from app.yml file
     public void consume(AccountOpenedEvent event, Acknowledgment ack) {
-        eventHandler.on(event);
+        this.eventHandler.on(event);
         ack.acknowledge(); // commit the offset
     }
 
     @Override
     @KafkaListener(topics = "FundsDepositedEvent", groupId = "${spring.kafka.consumer.group-id}") // this comes from app.yml file
     public void consume(FundsDepositedEvent event, Acknowledgment ack) {
-        eventHandler.on(event);
+        this.eventHandler.on(event);
         ack.acknowledge();
     }
 
     @Override
     @KafkaListener(topics = "FundsWithdrawnEvent", groupId = "${spring.kafka.consumer.group-id}") // this comes from app.yml file
     public void consume(FundsWithdrawnEvent event, Acknowledgment ack) {
-        eventHandler.on(event);
+        this.eventHandler.on(event);
         ack.acknowledge();
     }
 
     @Override
     @KafkaListener(topics = "AccountClosedEvent", groupId = "${spring.kafka.consumer.group-id}") // this comes from app.yml file
     public void consume(AccountClosedEvent event, Acknowledgment ack) {
-        eventHandler.on(event);
+        this.eventHandler.on(event);
         ack.acknowledge();
     }
 
