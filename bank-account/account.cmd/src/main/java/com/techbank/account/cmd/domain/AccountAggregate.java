@@ -87,4 +87,8 @@ public class AccountAggregate extends AggregateRoot {
         this.active = false;
     }
 
+    public boolean getActive() {
+       return this.active;
+    }
+
 }

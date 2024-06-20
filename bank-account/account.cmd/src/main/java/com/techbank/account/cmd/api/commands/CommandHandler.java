@@ -5,4 +5,5 @@ public interface CommandHandler {                   // zasto ova ne se napravi g
     void handle(DepositFundsCommand command);
     void handle(WithdrawFundsCommand command);
     void handle(CloseAccountCommand command);
+    void handle(RestoreReadDbCommand command);
 }
