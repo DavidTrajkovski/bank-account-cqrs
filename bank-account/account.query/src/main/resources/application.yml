@@ -3,11 +3,22 @@ server:
 
 spring:
   jpa:
+    # postgreSQL jpa settings
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+    # MySQL jpa settings
     database-platform: org.hibernate.dialect.MySQL8Dialect
     show-sql: true
     hibernate:
       ddl-auto: update
   datasource:
+    # postgreSQL jpa settings
+#    url: jdbc:postgresql://localhost:5432/bankAccount
+#    username: postgres
+#    password: root
+    # MySQL jpa settings
     url: jdbc:mysql://localhost:3306/bankAccount?createDatabaseIfNotExist=true
     username: root
     password: techbankRootPsw
